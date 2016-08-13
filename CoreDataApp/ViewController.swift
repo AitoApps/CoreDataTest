@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
     
@@ -17,6 +18,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var txtLongitude: UITextField!
     
     @IBOutlet weak var storeImage: UIImageView!
+    
+    let moc = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +35,43 @@ class ViewController: UIViewController {
     
     
     @IBAction func saveAction(sender: AnyObject) {
+        
+        let ed = NSEntityDescription.entityForName("Stores", inManagedObjectContext: moc)
+        
+        let store = Stores(entity: ed!, insertIntoManagedObjectContext: moc)
+        
+        store.storeName = txtName.text
+        store.storeDescription = txtDescription.text
+        store.storeLatitude = txtLatitude.text
+        store.storelongitude = txtLongitude.text
+        
+        let img = UIImage(named: "icon.jpg")
+        let imgData = UIImageJPEGRepresentation(img!, 1)
+        
+        store.storeImage = imgData
+        
+        do{
+            try moc.save()
+            txtName.text = ""
+            txtDescription.text = ""
+            txtLatitude.text = ""
+            txtLongitude.text = ""
+            
+            self.hideKB(self)
+            
+            Alert.show("Success", message: "Your Record is Saved", vc: self)
+            
+            
+            
+        }catch let error as NSError
+        {
+             Alert.show("Failed", message: "Your Record is NOT Saved", vc: self)
+        }
+        
+        
+        
+        
+        
     }
     
     @IBAction func searchAction(sender: AnyObject) {
