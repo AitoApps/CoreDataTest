@@ -75,6 +75,37 @@ class ViewController: UIViewController {
     }
     
     @IBAction func searchAction(sender: AnyObject) {
+        let ed = NSEntityDescription.entityForName("Stores", inManagedObjectContext: moc)
+        
+        // tabda tgade f request dialek
+        
+        let req = NSFetchRequest()
+        req.entity = ed
+        
+        let cond = NSPredicate(format: "storeName = %@", txtName.text! )
+        req.predicate = cond
+        
+        do{
+            let result = try moc.executeFetchRequest(req)
+            
+            if result.count > 0 {
+                let store = result[0] as! Stores
+                txtName.text = store.storeName
+                txtDescription.text = store.storeDescription
+                txtLatitude.text = store.storeLatitude
+                txtLongitude.text = store.storelongitude
+                storeImage.image = UIImage(data: store.storeImage!)
+                
+                
+            }else{
+                Alert.show("Failed", message: "No Record is Found", vc: self)
+            }
+            
+        }catch let error as NSError
+        {
+            Alert.show("Failed", message: error.localizedDescription, vc: self)
+        }
+        
     }
 
     @IBAction func hideKB(sender: AnyObject) {
