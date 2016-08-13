@@ -13,6 +13,8 @@
 		221CBBC61D5E56F400222854 /* CoreDataApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 221CBBC41D5E56F400222854 /* CoreDataApp.xcdatamodeld */; };
 		221CBBC81D5E56F400222854 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 221CBBC71D5E56F400222854 /* Assets.xcassets */; };
 		221CBBCB1D5E56F400222854 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 221CBBC91D5E56F400222854 /* LaunchScreen.storyboard */; };
+		221CBBD41D5E67F300222854 /* Stores+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221CBBD21D5E67F300222854 /* Stores+CoreDataProperties.swift */; };
+		221CBBD51D5E67F300222854 /* Stores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221CBBD31D5E67F300222854 /* Stores.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		221CBBC71D5E56F400222854 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		221CBBCA1D5E56F400222854 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		221CBBCC1D5E56F400222854 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		221CBBD21D5E67F300222854 /* Stores+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Stores+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		221CBBD31D5E67F300222854 /* Stores.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stores.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +44,8 @@
 		221CBBB11D5E56F400222854 = {
 			isa = PBXGroup;
 			children = (
+				221CBBD21D5E67F300222854 /* Stores+CoreDataProperties.swift */,
+				221CBBD31D5E67F300222854 /* Stores.swift */,
 				221CBBBC1D5E56F400222854 /* CoreDataApp */,
 				221CBBBB1D5E56F400222854 /* Products */,
 			);
@@ -138,7 +144,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				221CBBD51D5E67F300222854 /* Stores.swift in Sources */,
 				221CBBC01D5E56F400222854 /* ViewController.swift in Sources */,
+				221CBBD41D5E67F300222854 /* Stores+CoreDataProperties.swift in Sources */,
 				221CBBC61D5E56F400222854 /* CoreDataApp.xcdatamodeld in Sources */,
 				221CBBBE1D5E56F400222854 /* AppDelegate.swift in Sources */,
 			);

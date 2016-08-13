@@ -9,6 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    
+    @IBOutlet weak var txtName: UITextField!
+    @IBOutlet weak var txtDescription: UITextField!
+    @IBOutlet weak var txtLatitude: UITextField!
+    @IBOutlet weak var txtLongitude: UITextField!
+    
+    @IBOutlet weak var storeImage: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +27,21 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    
+    @IBAction func saveAction(sender: AnyObject) {
+    }
+    
+    @IBAction func searchAction(sender: AnyObject) {
+    }
 
+    @IBAction func hideKB(sender: AnyObject) {
+        txtName.resignFirstResponder()
+        txtDescription.resignFirstResponder()
+        txtLatitude.resignFirstResponder()
+        txtLongitude.resignFirstResponder()
+    }
 
 }
 
