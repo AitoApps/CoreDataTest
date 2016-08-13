@@ -8,8 +8,14 @@
 
 import UIKit
 import CoreData
+import MapKit
+
+
 
 class ViewController: UIViewController {
+    
+    
+    @IBOutlet weak var mapView: MKMapView!
     
     
     @IBOutlet weak var txtName: UITextField!
@@ -113,6 +119,32 @@ class ViewController: UIViewController {
         txtDescription.resignFirstResponder()
         txtLatitude.resignFirstResponder()
         txtLongitude.resignFirstResponder()
+    }
+    
+    
+    @IBAction func addPin(sender: UILongPressGestureRecognizer) {
+        
+        let location = sender.locationInView(self.mapView)
+        
+        let locCoord = self.mapView.convertPoint(location, toCoordinateFromView: self.mapView)
+        
+        let lat: Double = locCoord.latitude
+        let lng: Double = locCoord.longitude
+        
+        txtLatitude.text = "\(lat)"
+        txtLongitude.text = "\(lng)"
+        
+        let annotation = MKPointAnnotation()
+        
+        annotation.coordinate = locCoord
+        annotation.title = "Store"
+        annotation.subtitle = "Location of Store"
+        
+        
+        
+        self.mapView.removeAnnotations(mapView.annotations)
+        self.mapView.addAnnotation(annotation)
+        
     }
 
 }

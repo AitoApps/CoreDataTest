@@ -17,6 +17,9 @@
 		221CBBD51D5E67F300222854 /* Stores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221CBBD31D5E67F300222854 /* Stores.swift */; };
 		221CBBD71D5F1C1700222854 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221CBBD61D5F1C1700222854 /* Alert.swift */; };
 		221CBBD91D5F2DDD00222854 /* icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 221CBBD81D5F2DDD00222854 /* icon.jpg */; };
+		221CBBDB1D5F844D00222854 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 221CBBDA1D5F844D00222854 /* MapKit.framework */; };
+		221CBBDD1D5F847C00222854 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 221CBBDC1D5F847C00222854 /* CoreLocation.framework */; };
+		221CBBDF1D5F9F6600222854 /* ListStoresTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221CBBDE1D5F9F6600222854 /* ListStoresTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		221CBBD31D5E67F300222854 /* Stores.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stores.swift; sourceTree = "<group>"; };
 		221CBBD61D5F1C1700222854 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		221CBBD81D5F2DDD00222854 /* icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon.jpg; sourceTree = "<group>"; };
+		221CBBDA1D5F844D00222854 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		221CBBDC1D5F847C00222854 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		221CBBDE1D5F9F6600222854 /* ListStoresTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListStoresTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +45,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				221CBBDD1D5F847C00222854 /* CoreLocation.framework in Frameworks */,
+				221CBBDB1D5F844D00222854 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +56,8 @@
 		221CBBB11D5E56F400222854 = {
 			isa = PBXGroup;
 			children = (
+				221CBBDC1D5F847C00222854 /* CoreLocation.framework */,
+				221CBBDA1D5F844D00222854 /* MapKit.framework */,
 				221CBBD61D5F1C1700222854 /* Alert.swift */,
 				221CBBD21D5E67F300222854 /* Stores+CoreDataProperties.swift */,
 				221CBBD31D5E67F300222854 /* Stores.swift */,
@@ -70,6 +80,7 @@
 			children = (
 				221CBBBD1D5E56F400222854 /* AppDelegate.swift */,
 				221CBBBF1D5E56F400222854 /* ViewController.swift */,
+				221CBBDE1D5F9F6600222854 /* ListStoresTableViewController.swift */,
 				221CBBC11D5E56F400222854 /* Main.storyboard */,
 				221CBBC71D5E56F400222854 /* Assets.xcassets */,
 				221CBBC91D5E56F400222854 /* LaunchScreen.storyboard */,
@@ -156,6 +167,7 @@
 				221CBBC01D5E56F400222854 /* ViewController.swift in Sources */,
 				221CBBD41D5E67F300222854 /* Stores+CoreDataProperties.swift in Sources */,
 				221CBBC61D5E56F400222854 /* CoreDataApp.xcdatamodeld in Sources */,
+				221CBBDF1D5F9F6600222854 /* ListStoresTableViewController.swift in Sources */,
 				221CBBBE1D5E56F400222854 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
